@@ -1,0 +1,61 @@
+/* ===== Services Page ===== */
+
+.services-page {
+    padding: 120px 9% 80px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.section-title span {
+    color: var(--main-color);
+}
+
+.section-subtitle {
+    opacity: 0.8;
+    margin-bottom: 50px;
+}
+
+/* Grid */
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+/* Cards */
+
+.service-card {
+    padding: 35px 25px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: 0.35s ease;
+    cursor: pointer;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--main-color);
+}
+
+/* Icon */
+
+.service-icon {
+    font-size: 40px;
+    color: var(--main-color);
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 14px;
+    opacity: 0.85;
+}

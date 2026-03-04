@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience | Gore Sentinel</title>
+    <link rel="stylesheet" href="style.css">
+
+```
+<style>
+    /* ===== Experience Page Styles ===== */
+
+    .experience-page {
+        padding-top: 12rem;
+        min-height: 100vh;
+        background: black;
+    }
+
+    .exp-heading {
+        text-align: center;
+        font-size: 5rem;
+        margin-bottom: 6rem;
+        font-weight: 700;
+    }
+
+    /* ===== Timeline ===== */
+
+    .exp-timeline {
+        position: relative;
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    .exp-timeline::after {
+        content: '';
+        position: absolute;
+        width: 4px;
+        background: #b74b4b;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -2px;
+    }
+
+    .exp-container {
+        padding: 2rem 4rem;
+        position: relative;
+        width: 50%;
+    }
+
+    .exp-container.left {
+        left: 0;
+    }
+
+    .exp-container.right {
+        left: 50%;
+    }
+
+    .exp-content {
+        background: rgba(255,255,255,0.05);
+        backdrop-filter: blur(10px);
+        padding: 2.5rem;
+        border-radius: 1.5rem;
+        border: 1px solid rgba(183,75,75,0.3);
+        transition: 0.4s ease;
+    }
+
+    .exp-content:hover {
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 0 25px rgba(183,75,75,0.5);
+    }
+
+    .exp-content h2 {
+        font-size: 2.4rem;
+        color: #b74b4b;
+        margin-bottom: 0.6rem;
+    }
+
+    .exp-content h3 {
+        font-size: 1.6rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .exp-content p {
+        font-size: 1.4rem;
+        opacity: 0.9;
+        line-height: 1.6;
+    }
+
+    /* ===== Timeline dots ===== */
+
+    .exp-container::after {
+        content: '';
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        right: -9px;
+        background: #b74b4b;
+        border-radius: 50%;
+        top: 28px;
+        z-index: 1;
+        box-shadow: 0 0 15px #b74b4b;
+    }
+
+    .exp-container.right::after {
+        left: -9px;
+    }
+
+    /* ===== Responsive ===== */
+
+    @media screen and (max-width: 900px) {
+
+        .exp-timeline::after {
+            left: 20px;
+        }
+
+        .exp-container {
+            width: 100%;
+            padding-left: 6rem;
+            padding-right: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .exp-container.right {
+            left: 0;
+        }
+
+        .exp-container::after {
+            left: 11px;
+        }
+
+        .exp-heading {
+            font-size: 3.5rem;
+        }
+    }
+</style>
+
+
+</head>
+
+<body>
+
+<header>
+    <a href="index.html" class="logo">Gore-Sentinel</a>
+
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="skills.html">Skills</a>
+    <a href="education.html">Education</a>
+    <a href="experience.html" class="active">Experience</a>
+	<a href="certificates.html">Certificates</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+
+</header>
+
+<section class="experience-page">
+
+
+<h1 class="exp-heading">My <span>Experience</span></h1>
+
+<div class="exp-timeline">
+
+
+    <!-- Experience 1 -->
+    <div class="exp-container left">
+        <div class="exp-content">
+            <h2>Full Stack Development Learner</h2>
+            <h3>Self Learning Journey</h3>
+            <p>Built responsive portfolio websites, practiced modern frontend technologies, and implemented real-world UI projects.</p>
+        </div>
+    </div>
+
+    <!-- Experience 2 -->
+    <div class="exp-container right">
+        <div class="exp-content">
+            <h2>Cyber Security Enthusiast</h2>
+            <h3>Independent Practice</h3>
+            <p>Studying ethical hacking, network security fundamentals, and defensive security strategies for real-world applications.</p>
+        </div>
+    </div>
+
+    <!-- Experience 3 -->
+    <div class="exp-container left">
+        <div class="exp-content">
+            <h2>NCC Cadet (Army & Air Wing)</h2>
+            <h3>National Cadet Corps</h3>
+            <p>Developed leadership, discipline, and mission-focused teamwork through intensive training camps and drills.</p>
+        </div>
+    </div>
+<!-- Experience 4 -->
+    <div class="exp-container right">
+        <div class="exp-content">
+            <h2>Defence Aspirant</h2>
+            <h3>Appered 4 SSB </h3>
+            <p>The results were Confrence Out and entry were TES-52/53 and Navy-tech entry.</p>
+        </div>
+    </div>
+
+
+</div>
+
+
+</section>
+
+</body>
+</html>

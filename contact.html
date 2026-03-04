@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Gore Sentinel</title>
+    <link rel="stylesheet" href="style.css">
+
+```
+<style>
+    /* ===== Contact Page Styles ===== */
+
+    .contact-page {
+        padding-top: 12rem;
+        min-height: 100vh;
+        background: black;
+    }
+
+    .contact-heading {
+        text-align: center;
+        font-size: 5rem;
+        margin-bottom: 5rem;
+        font-weight: 700;
+    }
+
+    .contact-wrapper {
+        max-width: 1100px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        gap: 4rem;
+    }
+
+    /* ===== Left Info Card ===== */
+
+    .contact-info {
+        background: rgba(255,255,255,0.05);
+        backdrop-filter: blur(12px);
+        padding: 3rem;
+        border-radius: 2rem;
+        border: 1px solid rgba(183,75,75,0.3);
+        transition: 0.4s ease;
+    }
+
+    .contact-info:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 0 25px rgba(183,75,75,0.5);
+    }
+
+    .contact-info h2 {
+        color: #b74b4b;
+        font-size: 2.6rem;
+        margin-bottom: 2rem;
+    }
+
+    .info-item {
+        margin-bottom: 2rem;
+        font-size: 1.5rem;
+        opacity: 0.9;
+    }
+
+    /* ===== Form ===== */
+
+    .contact-form {
+        background: rgba(255,255,255,0.05);
+        backdrop-filter: blur(12px);
+        padding: 3rem;
+        border-radius: 2rem;
+        border: 1px solid rgba(183,75,75,0.3);
+    }
+
+    .contact-form h2 {
+        color: #b74b4b;
+        font-size: 2.6rem;
+        margin-bottom: 2rem;
+    }
+
+    .input-box {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+    }
+
+    .input-box input,
+    .input-box textarea {
+        padding: 1.4rem;
+        background: #111;
+        border: 1px solid rgba(183,75,75,0.4);
+        border-radius: 1rem;
+        color: white;
+        font-size: 1.4rem;
+        transition: 0.3s ease;
+    }
+
+    .input-box input:focus,
+    .input-box textarea:focus {
+        border-color: #b74b4b;
+        box-shadow: 0 0 10px #b74b4b;
+    }
+
+    .input-box textarea {
+        resize: none;
+        min-height: 140px;
+    }
+
+    .contact-btn {
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    /* ===== Responsive ===== */
+
+    @media (max-width: 900px) {
+        .contact-wrapper {
+            grid-template-columns: 1fr;
+        }
+
+        .contact-heading {
+            font-size: 3.5rem;
+        }
+    }
+</style>
+```
+
+</head>
+
+<body>
+
+<header>
+    <a href="index.html" class="logo">Gore-Sentinel</a>
+
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="skills.html">Skills</a>
+    <a href="education.html">Education</a>
+    <a href="experience.html">Experience</a>
+	<a href="certificates.html">Certificates</a>
+    <a href="contact.html" class="active">Contact</a>
+</nav>
+
+
+</header>
+
+<section class="contact-page">
+
+
+<h1 class="contact-heading">Contact <span>Me</span></h1>
+
+<div class="contact-wrapper">
+
+    <!-- Left Info -->
+    <div class="contact-info">
+        <h2>Get In Touch</h2>
+
+        <div class="info-item">
+            📍 Location: Vadodara, Gujarat
+        </div>
+
+        <div class="info-item">
+            📧 Email: prithivirajgore.sentinel@gmail.com
+        </div>
+
+        <div class="info-item">
+            📱 Phone: +91 8140005174
+        </div>
+
+        <div class="info-item">
+            🛡️ Focus: Cyber Security & Defence Tech
+        </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form">
+        <h2>Send Message</h2>
+
+        <form>
+            <div class="input-box">
+                <input type="text" placeholder="Your Name" required>
+            </div>
+
+            <div class="input-box">
+                <input type="email" placeholder="Your Email" required>
+            </div>
+
+            <div class="input-box">
+                <input type="text" placeholder="Subject">
+            </div>
+
+            <div class="input-box">
+                <textarea placeholder="Your Message" required></textarea>
+            </div>
+
+            <button type="submit" class="btn contact-btn">Send Message</button>
+        </form>
+    </div>
+
+</div>
+
+
+</section>
+
+</body>
+</html>
