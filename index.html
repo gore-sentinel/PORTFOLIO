@@ -8,6 +8,16 @@
     <link rel="stylesheet" href="style.css">
     <title>Portfolio Website</title>
 </head>
+
+<script>
+const toggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector("nav");
+
+if(toggle){
+  toggle.onclick = () => nav.classList.toggle("active");
+}
+</script>
+
 <body>
     <header>
         <a href="#" class="logo">
@@ -36,7 +46,7 @@
             <h3 class="typing-text">I'm a <span id="typed-text"></span></h3>
             <p>I am a disciplined engineering student driven by a strong passion for cyber security and defence technology. My NCC experience across Army and Air Wing has cultivated leadership, resilience, and a mission-focused mindset. With a solid foundation in programming and continuous advancement in full-stack development, I strive to integrate technical precision with strategic thinking. My objective is to contribute meaningfully to security-critical and high-impact technological domains.</p>
             <div class="social-icons">
-                <a href="https://www.linkedin.com/in/prithiviraj-gore-774b98384?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B%2Fw1CO4FDT7uLej74rfoubw%3D%3D"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
                 <a href="https://github.com/gore-sentinel" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
                 <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
                 <a href="https://www.instagram.com/goreprithiviraj/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
@@ -48,8 +58,7 @@
         </div>
     </section>
 
-
-	<script>
+<script>
 const roles = ["Web Developer", "Fullstack Developer", "Cyber Security Expert", "Defence Aspirant", "NCC Cadet"];
 let i = 0;
 let j = 0;
@@ -87,10 +96,5 @@ function typeWriter() {
 
 document.addEventListener('DOMContentLoaded', typeWriter);
 </script>
-
-
 </body>
-
 </html>
-
-
