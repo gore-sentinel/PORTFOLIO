@@ -22,7 +22,7 @@ body{
     background-color: black;
     color: white;
 
-    padding-top: 8rem; /* <-- add this line */
+    padding-top: 80px; /* <-- add this line */
 }
 
 header {
@@ -196,8 +196,6 @@ span{
     box-shadow: 0 0 25px #b74b4b;
 }
 
-
-
 @keyframes cursor{
     to{
         border-left: 3px solid #b74b4b;
@@ -280,6 +278,5 @@ html {
     border-left: 4px solid #b74b4b;
     border-radius: 1rem;
 }
-
 
 
