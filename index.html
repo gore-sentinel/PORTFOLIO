@@ -49,6 +49,47 @@
     </section>
 
 
+	<script>
+const roles = ["Web Developer", "Fullstack Developer", "Cyber Security Expert", "Defence Aspirant", "NCC Cadet"];
+let i = 0;
+let j = 0;
+let currentRole = '';
+let isDeleting = false;
+const speed = 100; // typing speed (ms per letter)
+const pause = 1500; // pause after full word
+
+function typeWriter() {
+    const typedText = document.getElementById('typed-text');
+
+    if(i >= roles.length) i = 0; // loop back
+
+    currentRole = roles[i];
+
+    if(!isDeleting) {
+        typedText.textContent = currentRole.substring(0, j+1);
+        j++;
+        if(j === currentRole.length) {
+            isDeleting = true;
+            setTimeout(typeWriter, pause);
+            return;
+        }
+    } else {
+        typedText.textContent = currentRole.substring(0, j-1);
+        j--;
+        if(j === 0) {
+            isDeleting = false;
+            i++;
+        }
+    }
+
+    setTimeout(typeWriter, speed);
+}
+
+document.addEventListener('DOMContentLoaded', typeWriter);
+</script>
+
+
 </body>
 
 </html>
+
