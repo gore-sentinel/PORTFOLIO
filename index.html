@@ -155,5 +155,29 @@ document.addEventListener("DOMContentLoaded", typeWriter);
 
 </script>
 
+
+    <script>
+const toggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector("nav");
+const navLinks = document.querySelectorAll("nav a");
+
+/* open / close menu */
+
+if(toggle){
+  toggle.onclick = () => {
+    nav.classList.toggle("active");
+  }
+}
+
+/* close menu when link clicked */
+
+navLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    nav.classList.remove("active");
+  });
+});
+</script>
+
 </body>
 </html>
+
