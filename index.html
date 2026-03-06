@@ -1,100 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+
     <title>Portfolio Website</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
+<body>
+
+<header>
+
+    <a href="index.html" class="logo">
+        <img src="logo.png" alt="Gore-Sentinel Logo" class="logo-img">
+        Gore-Sentinel
+    </a>
+
+    <!-- Mobile Menu Button -->
+    <div class="menu-toggle">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="services.html">Services</a>
+        <a href="skills.html">Skills</a>
+        <a href="education.html">Education</a>
+        <a href="experience.html">Experience</a>
+        <a href="certificates.html">Certificates</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+</header>
+
+<section class="home">
+
+    <div class="home-img">
+        <img src="main.png" alt="Profile Image">
+    </div>
+
+    <div class="home-content">
+
+        <h1>Hi, It's <span>Prithiviraj Gore</span></h1>
+
+        <h3 class="typing-text">I'm a <span id="typed-text"></span></h3>
+
+        <p>
+            I am a disciplined engineering student driven by a strong passion for cyber security and defence technology.
+            My NCC experience across Army and Air Wing has cultivated leadership, resilience, and a mission-focused mindset.
+            With a solid foundation in programming and continuous advancement in full-stack development, I strive to
+            integrate technical precision with strategic thinking.
+        </p>
+
+        <div class="social-icons">
+
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+
+            <a href="https://github.com/gore-sentinel" target="_blank">
+                <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+
+            <a href="https://www.instagram.com/goreprithiviraj/" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+        </div>
+
+        <a href="https://wa.me/918140005174" target="_blank" class="btn">
+            Hire Me
+        </a>
+
+    </div>
+
+</section>
+
+<!-- JavaScript placed at bottom -->
+
 <script>
+
+/* Mobile Menu */
+
 const toggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector("nav");
 
-if(toggle){
-  toggle.onclick = () => nav.classList.toggle("active");
-}
-</script>
-
-<body>
-    <header>
-        <a href="#" class="logo">
-    		<img src="logo.png" alt="Gore-Sentinel Logo" class="logo-img">
-   		 Gore-Sentinel
-	</a>
-		
+toggle.onclick = () => {
+    nav.classList.toggle("active");
+};
 
 
-       <nav>
-    	<a href="index.html" class="active">Home</a>
-    	<a href="services.html">Services</a>
-    	<a href="skills.html">Skills</a>
-    	<a href="education.html">Education</a>
-    	<a href="experience.html">Experience</a>
-	<a href="certificates.html">Certificates</a>
-    	<a href="contact.html">Contact</a>
-       </nav>
-    </header>
-    <section class="home">
-        <div class="home-img">
-            <img src="main.png" alt="">
-        </div>
-        <div class="home-content">
-            <h1>Hi, It's <span>Prithiviraj Gore</span></h1>
-            <h3 class="typing-text">I'm a <span id="typed-text"></span></h3>
-            <p>I am a disciplined engineering student driven by a strong passion for cyber security and defence technology. My NCC experience across Army and Air Wing has cultivated leadership, resilience, and a mission-focused mindset. With a solid foundation in programming and continuous advancement in full-stack development, I strive to integrate technical precision with strategic thinking. My objective is to contribute meaningfully to security-critical and high-impact technological domains.</p>
-            <div class="social-icons">
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://github.com/gore-sentinel" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
-                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="https://www.instagram.com/goreprithiviraj/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
-            </div>
-            
-	    <a href="https://wa.me/918140005174" target="_blank" class="btn">
-    		Hire Me
-	    </a>
-        </div>
-    </section>
+/* Typing Effect */
 
-<script>
-const roles = ["Web Developer", "Fullstack Developer", "Cyber Security Expert", "Defence Aspirant", "NCC Cadet"];
+const roles = [
+"Web Developer",
+"Fullstack Developer",
+"Cyber Security Expert",
+"Defence Aspirant",
+"NCC Cadet"
+];
+
 let i = 0;
 let j = 0;
 let currentRole = '';
 let isDeleting = false;
-const speed = 100; // typing speed (ms per letter)
-const pause = 1500; // pause after full word
+
+const speed = 100;
+const pause = 1500;
 
 function typeWriter() {
-    const typedText = document.getElementById('typed-text');
 
-    if(i >= roles.length) i = 0; // loop back
+const typedText = document.getElementById('typed-text');
 
-    currentRole = roles[i];
+if(i >= roles.length) i = 0;
 
-    if(!isDeleting) {
-        typedText.textContent = currentRole.substring(0, j+1);
-        j++;
-        if(j === currentRole.length) {
-            isDeleting = true;
-            setTimeout(typeWriter, pause);
-            return;
-        }
-    } else {
-        typedText.textContent = currentRole.substring(0, j-1);
-        j--;
-        if(j === 0) {
-            isDeleting = false;
-            i++;
-        }
-    }
+currentRole = roles[i];
 
-    setTimeout(typeWriter, speed);
+if(!isDeleting){
+
+typedText.textContent = currentRole.substring(0, j+1);
+j++;
+
+if(j === currentRole.length){
+isDeleting = true;
+setTimeout(typeWriter, pause);
+return;
 }
 
-document.addEventListener('DOMContentLoaded', typeWriter);
+}
+
+else{
+
+typedText.textContent = currentRole.substring(0, j-1);
+j--;
+
+if(j === 0){
+isDeleting = false;
+i++;
+}
+
+}
+
+setTimeout(typeWriter, speed);
+
+}
+
+document.addEventListener("DOMContentLoaded", typeWriter);
+
 </script>
+
 </body>
 </html>
